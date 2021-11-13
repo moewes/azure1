@@ -2,6 +2,7 @@ package net.moewes.odata.people;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import net.moewes.quarkus.odata.EntityCollectionProvider;
@@ -9,7 +10,8 @@ import net.moewes.quarkus.odata.EntityProvider;
 import net.moewes.quarkus.odata.annotations.ODataService;
 
 @ODataService(value = "Employees", entityType = "Employee")
-public class EmployeesService implements EntityCollectionProvider<Employee>, EntityProvider<Employee, String> {
+public class EmployeesService implements EntityCollectionProvider<Employee>,
+        EntityProvider<Employee> {
 
     public List<Employee> getEmployees() {
 
@@ -36,13 +38,28 @@ public class EmployeesService implements EntityCollectionProvider<Employee>, Ent
     }
 
     @Override
-    public Optional<Employee> find(String key) {
+    public Optional<Employee> find(Map<String, String> keys) {
 
         Employee e2 = new Employee();
-        e2.setId(key);
+        e2.setId(keys.get("Id"));
         e2.setName("Palme");
         e2.setSurname("Olov");
 
         return Optional.ofNullable(e2);
+    }
+
+    @Override
+    public Employee create(Object entity) {
+        return null;
+    }
+
+    @Override
+    public void update(Map<String, String> keys, Object entity) {
+        
+    }
+
+    @Override
+    public void delete(Map<String, String> keys) {
+
     }
 }

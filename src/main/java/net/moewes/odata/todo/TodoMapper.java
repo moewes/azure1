@@ -7,4 +7,6 @@ import org.mapstruct.Mapper;
 public interface TodoMapper {
 
     TodoOdataEntity toOdata(Todo entity);
+
+    Todo toEntity(TodoOdataEntity odataEntity);
 }
