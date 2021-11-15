@@ -4,17 +4,20 @@
         xmlns="sap.m"
         xmlns:mvc="sap.ui.core.mvc">
     <Shell>
-        <App busy="{appView>/busy}" class="sapUiSizeCompact">
+        <App id="idAppControl">
             <pages>
-                <Page title="{i18n>peoplePageTitle}">
+                <Page title="{i18n>title}">
+
                     <content>
+                        <Button text="Hallo" press=".onPress" type="Emphasized"
+                                class="sapUiSmallMargin"></Button>
                         <Table
                                 id="peopleList"
                                 growing="false"
 
                                 items="{
-								path: '/Todos'
-							}">
+path: '/Todos'
+}">
                             <headerToolbar>
                                 <OverflowToolbar>
                                     <content>
@@ -28,32 +31,14 @@
                                 </OverflowToolbar>
                             </headerToolbar>
                             <columns>
-                                <Column id="userNameColumn">
-                                    <Text text="{i18n>userNameLabelText}"/>
-                                </Column>
-                                <Column id="firstNameColumn">
-                                    <Text text="{i18n>firstNameLabelText}"/>
-                                </Column>
-                                <Column id="lastNameColumn">
-                                    <Text text="{i18n>lastNameLabelText}"/>
-                                </Column>
                                 <Column id="ageColumn">
-                                    <Text text="{i18n>ageLabelText}"/>
+                                    <Text text="Description"/>
                                 </Column>
                             </columns>
                             <items>
                                 <ColumnListItem>
                                     <cells>
-                                        <Input value="{RowKey}"/>
-                                    </cells>
-                                    <cells>
-                                        <Input value="{PartitionKey}"/>
-                                    </cells>
-                                    <cells>
-                                        <Input value="{Etag}"/>
-                                    </cells>
-                                    <cells>
-                                        <Input value="{Description}"/>
+                                        <Text text="{Description}"/>
                                     </cells>
                                 </ColumnListItem>
                             </items>
