@@ -2,3 +2,4 @@
 /local
 *.iml
 /.idea
+.DS_Store
