@@ -22,7 +22,7 @@
         <resources-plugin.version>3.1.0</resources-plugin.version>
         <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
         <org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
-        <lombok.version>1.18.22</lombok.version>
+        <lombok.version>1.18.24</lombok.version>
 
         <azure.functions.maven.plugin.version>1.14.1
         </azure.functions.maven.plugin.version>
@@ -65,6 +65,10 @@
             <artifactId>quarkus-reactive-routes</artifactId>
         </dependency>
         <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-azure-functions-http</artifactId>
+        </dependency>
+        <dependency>
             <groupId>net.moewes</groupId>
             <artifactId>cloud-ui-quarkus-extension</artifactId>
             <version>0.3.0-SNAPSHOT</version>
@@ -80,15 +84,6 @@
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-azure-functions-http</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>net.moewes</groupId>
-            <artifactId>quarkus-azure-functions-oidc-workaround</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
             <groupId>net.moewes</groupId>
             <artifactId>azure-table-storage</artifactId>
             <version>1.0.0-SNAPSHOT</version>
@@ -97,6 +92,7 @@
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
             <version>${org.mapstruct.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
@@ -149,7 +145,6 @@
                         <java.util.logging.manager>
                             org.jboss.logmanager.LogManager
                         </java.util.logging.manager>
-                        <maven.home>${maven.home}</maven.home>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
@@ -179,7 +174,7 @@
                         </property>
                         <property>
                             <name>FUNCTIONS_EXTENSION_VERSION</name>
-                            <value>~3</value>
+                            <value>~4</value>
                         </property>
                         <property>
                             <name>FUNCTIONS_WORKER_RUNTIME</name>
