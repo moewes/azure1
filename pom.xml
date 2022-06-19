@@ -8,7 +8,7 @@
     <artifactId>azure1</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <properties>
-        <compiler-plugin.version>3.8.1</compiler-plugin.version>
+        <compiler-plugin.version>3.10.1</compiler-plugin.version>
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <maven.compiler.target>11</maven.compiler.target>
         <maven.compiler.source>11</maven.compiler.source>
@@ -23,7 +23,6 @@
         <surefire-plugin.version>3.0.0-M7</surefire-plugin.version>
         <org.mapstruct.version>1.5.1.Final</org.mapstruct.version>
         <lombok.version>1.18.22</lombok.version>
-
         <azure.functions.maven.plugin.version>1.18.0</azure.functions.maven.plugin.version>
         <!--suppress UnresolvedMavenProperty -->
         <functionAppName>${app.azure.functionAppName}</functionAppName>
@@ -64,6 +63,10 @@
             <artifactId>quarkus-reactive-routes</artifactId>
         </dependency>
         <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-azure-functions-http</artifactId>
+        </dependency>
+        <dependency>
             <groupId>net.moewes</groupId>
             <artifactId>cloud-ui-quarkus-extension</artifactId>
             <version>0.3.0-SNAPSHOT</version>
@@ -77,15 +80,6 @@
             <groupId>net.moewes</groupId>
             <artifactId>quarkus-odata</artifactId>
             <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-azure-functions-http</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>net.moewes</groupId>
-            <artifactId>quarkus-azure-functions-oidc-workaround</artifactId>
-            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>net.moewes</groupId>
@@ -149,7 +143,6 @@
                         <java.util.logging.manager>
                             org.jboss.logmanager.LogManager
                         </java.util.logging.manager>
-                        <!--maven.home>${maven.home}</maven.home-->
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
