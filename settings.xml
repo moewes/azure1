@@ -5,17 +5,17 @@
 
   <servers>
     <server>
-      <id>github_cloud_ui_core</id>
+      <id>github_quarkus_cloudui</id>
       <username>${env.USERNAME}</username>
       <password>${env.PASSWORD}</password>
     </server>
     <server>
-      <id>github_vaadin_webjar</id>
+      <id>github_quarkus_odata</id>
       <username>${env.USERNAME}</username>
       <password>${env.PASSWORD}</password>
     </server>
     <server>
-      <id>github</id>
+      <id>github_quarkus_aztablestorage</id>
       <username>${env.USERNAME}</username>
       <password>${env.PASSWORD}</password>
     </server>
