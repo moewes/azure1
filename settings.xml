@@ -10,6 +10,11 @@
       <password>${env.PASSWORD}</password>
     </server>
     <server>
+      <id>github_cloudui_ui5</id>
+      <username>${env.USERNAME}</username>
+      <password>${env.PASSWORD}</password>
+    </server>
+    <server>
       <id>github_quarkus_odata</id>
       <username>${env.USERNAME}</username>
       <password>${env.PASSWORD}</password>
