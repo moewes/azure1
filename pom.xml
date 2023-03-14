@@ -20,7 +20,7 @@
         <quarkus.platform.version>2.15.1.Final</quarkus.platform.version>
         <quarkus-plugin.version>${quarkus.platform.version}</quarkus-plugin.version>
         <resources-plugin.version>3.3.0</resources-plugin.version>
-        <surefire-plugin.version>3.0.0-M7</surefire-plugin.version>
+        <surefire-plugin.version>3.0.0</surefire-plugin.version>
         <org.mapstruct.version>1.5.3.Final</org.mapstruct.version>
         <lombok.version>1.18.22</lombok.version>
         <azure.functions.maven.plugin.version>1.21.0</azure.functions.maven.plugin.version>
