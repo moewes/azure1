@@ -26,4 +26,19 @@
     </server>
   </servers>
 
+  <activeProfiles>
+    <activeProfile>github</activeProfile>
+  </activeProfiles>
+
+  <profiles>
+    <profile>
+      <id>github</id>
+      <properties>
+        <app.azure.functionAppName>xxx</app.azure.functionAppName>
+        <app.azure.functionAppRegion>germanywestcentral</app.azure.functionAppRegion>
+        <app.azure.functionResourceGroup>yyy</app.azure.functionResourceGroup>
+      </properties>
+    </profile>
+  </profiles>
+
 </settings>

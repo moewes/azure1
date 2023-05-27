@@ -1,14 +1,13 @@
 package net.moewes;
 
-import javax.enterprise.context.RequestScoped;
-import javax.enterprise.inject.Produces;
-import javax.enterprise.util.AnnotationLiteral;
-import javax.inject.Inject;
-
 import io.quarkus.oidc.AccessTokenCredential;
 import io.quarkus.oidc.IdToken;
 import io.quarkus.oidc.IdTokenCredential;
 import io.quarkus.security.identity.SecurityIdentity;
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.inject.Produces;
+import jakarta.enterprise.util.AnnotationLiteral;
+import jakarta.inject.Inject;
 import net.moewes.cloudui.quarkus.runtime.identity.Identity;
 import org.eclipse.microprofile.jwt.JsonWebToken;
 

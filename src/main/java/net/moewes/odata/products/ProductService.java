@@ -7,9 +7,9 @@ import java.util.Optional;
 
 import net.moewes.quarkus.odata.EntityCollectionProvider;
 import net.moewes.quarkus.odata.EntityProvider;
-import net.moewes.quarkus.odata.annotations.ODataService;
+import net.moewes.quarkus.odata.annotations.ODataEntitySet;
 
-@ODataService(value = "Products", entityType = "Product")
+@ODataEntitySet(value = "Products", entityType = "Product")
 public class ProductService implements EntityCollectionProvider<Product>, EntityProvider<Product> {
 
     @Override

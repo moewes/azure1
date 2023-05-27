@@ -1,16 +1,16 @@
 package net.moewes.rot.umlaufliste;
 
+import jakarta.inject.Inject;
 import net.moewes.Dao;
 import net.moewes.quarkus.odata.EntityCollectionProvider;
 import net.moewes.quarkus.odata.EntityProvider;
-import net.moewes.quarkus.odata.annotations.ODataService;
+import net.moewes.quarkus.odata.annotations.ODataEntitySet;
 
-import javax.inject.Inject;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-@ODataService(value = "Umlaufliste", entityType = "Umlaufliste")
+@ODataEntitySet(value = "Umlaufliste", entityType = "Umlaufliste")
 public class UmlauflisteEditService implements EntityProvider<OdataUmlauf>,
         EntityCollectionProvider<OdataUmlauf> {
 

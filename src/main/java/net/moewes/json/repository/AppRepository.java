@@ -1,11 +1,11 @@
 package net.moewes.json.repository;
 
+import jakarta.enterprise.context.ApplicationScoped;
 import net.moewes.json.manifest.Ui5Manifest;
 import net.moewes.json.manifest.Ui5ManifestApp;
 import net.moewes.json.manifest.Ui5ManifestUi;
 import net.moewes.json.manifest.Ui5ManifestUi5;
 
-import javax.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class AppRepository {

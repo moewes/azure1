@@ -6,18 +6,16 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
-
-import javax.inject.Inject;
-
 import com.microsoft.azure.storage.StorageException;
+import jakarta.inject.Inject;
 import lombok.SneakyThrows;
 import net.moewes.Dao;
 import net.moewes.app.todo.Todo;
 import net.moewes.quarkus.odata.EntityCollectionProvider;
 import net.moewes.quarkus.odata.EntityProvider;
-import net.moewes.quarkus.odata.annotations.ODataService;
+import net.moewes.quarkus.odata.annotations.ODataEntitySet;
 
-@ODataService(value = "Todos", entityType = "Todo")
+@ODataEntitySet(value = "Todos", entityType = "Todo")
 public class TodoService implements EntityProvider<TodoOdataEntity>,
         EntityCollectionProvider<TodoOdataEntity> {
 

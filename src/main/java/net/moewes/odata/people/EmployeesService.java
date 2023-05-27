@@ -7,9 +7,9 @@ import java.util.Optional;
 
 import net.moewes.quarkus.odata.EntityCollectionProvider;
 import net.moewes.quarkus.odata.EntityProvider;
-import net.moewes.quarkus.odata.annotations.ODataService;
+import net.moewes.quarkus.odata.annotations.ODataEntitySet;
 
-@ODataService(value = "Employees", entityType = "Employee")
+@ODataEntitySet(value = "Employees", entityType = "Employee")
 public class EmployeesService implements EntityCollectionProvider<Employee>,
         EntityProvider<Employee> {
 
