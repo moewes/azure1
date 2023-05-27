@@ -31,7 +31,7 @@
         <!--suppress UnresolvedMavenProperty -->
         <functionResourceGroup>${app.azure.functionResourceGroup}
         </functionResourceGroup>
-        <function>quarkus</function>
+        <function>QuarkusHttp</function>
         <stagingDirectory>
             ${project.build.directory}/azure-functions/${functionAppName}
         </stagingDirectory>
