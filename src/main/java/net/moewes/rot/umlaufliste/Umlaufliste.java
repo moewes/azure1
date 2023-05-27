@@ -1,6 +1,5 @@
 package net.moewes.rot.umlaufliste;
 
-import com.microsoft.azure.storage.table.TableEntity;
 import com.microsoft.azure.storage.table.TableServiceEntity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
