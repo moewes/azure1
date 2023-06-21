@@ -8,9 +8,16 @@ import net.moewes.cloudui.annotations.CloudUiView;
 import net.moewes.cloudui.html.Div;
 import net.moewes.cloudui.quarkus.runtime.CloudUi;
 import net.moewes.cloudui.ui5.Ui5Title;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 @CloudUiView("/")
 public class MyView extends Ui5BaseView {
+
+    @ConfigProperty(name = "quarkus.application.version")
+    String version;
+
+    @ConfigProperty(name = "quarkus.application.name")
+    String appName;
 
     private static final String FC_ROW_STYLE = "   font-size: .875rem;\n" +
             "    font-size: var(--sapFontSize, .875rem);\n" +
@@ -74,6 +81,7 @@ public class MyView extends Ui5BaseView {
     @PostConstruct
     public void createView() {
         add(new Ui5Title("Hello Ui5 web components"));
+        add(new Ui5Title("" + appName + "(" + version + ")"));
 
         content.getElement().setAttribute("style", FD_CONTAINER_STYLE);
 
@@ -99,5 +107,7 @@ public class MyView extends Ui5BaseView {
         row.add(aTile);
         row.add(aTile);
         row.add(aTile);
+
+
     }
 }
