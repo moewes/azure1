@@ -22,8 +22,8 @@
         <resources-plugin.version>3.3.1</resources-plugin.version>
         <surefire-plugin.version>3.1.2</surefire-plugin.version>
         <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
-        <lombok.version>1.18.28</lombok.version>
-        <azure.functions.maven.plugin.version>1.26.0</azure.functions.maven.plugin.version>
+        <lombok.version>1.18.30</lombok.version>
+        <azure.functions.maven.plugin.version>1.28.0</azure.functions.maven.plugin.version>
         <!--suppress UnresolvedMavenProperty -->
         <functionAppName>${app.azure.functionAppName}</functionAppName>
         <!--suppress UnresolvedMavenProperty -->
@@ -104,12 +104,12 @@
         <dependency>
             <groupId>net.moewes</groupId>
             <artifactId>cloud-ui-quarkus-extension</artifactId>
-            <version>0.4.0</version>
+            <version>0.4.2</version>
         </dependency>
         <dependency>
             <groupId>net.moewes</groupId>
             <artifactId>cloud-ui-ui5</artifactId>
-            <version>0.4.0</version>
+            <version>0.4.2</version>
         </dependency>
         <dependency>
             <groupId>net.moewes</groupId>
@@ -119,7 +119,7 @@
         <dependency>
             <groupId>net.moewes</groupId>
             <artifactId>azure-table-storage</artifactId>
-            <version>0.2.1</version>
+            <version>0.2.2</version>
         </dependency>
         <dependency>
             <groupId>org.mapstruct</groupId>
