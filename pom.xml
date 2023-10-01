@@ -38,6 +38,13 @@
         <quarkus.package.type>uber-jar</quarkus.package.type>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/moewes/azure1</url>
+        </repository>
+    </distributionManagement>
     <repositories>
         <repository>
             <id>github_quarkus_cloudui</id>
